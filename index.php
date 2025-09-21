@@ -8,7 +8,7 @@ function formatRand($amount)
 
 function getDashboardData($conn)
 {
-    // The query has been updated to pull data for the current year as per the instructions
+    // pull data for the current year 
     $sql = "SELECT DATE_FORMAT(CallTime, '%Y-%b') AS `year_month`, COUNT(*) AS `total_calls`, SUM(Cost) AS `total_cost` FROM `BVSCalls` WHERE YEAR(CallTime) = YEAR(CURDATE()) GROUP BY DATE_FORMAT(CallTime, '%Y-%b') ORDER BY `CallTime` ASC";
     $result = $conn->query($sql);
     if ($result === false) {
