@@ -1,11 +1,5 @@
 <?php
-// db.php - This file establishes the database connection
-
-// Configuration details
-define('DB_HOST', 'localhost');
-define('DB_USER', 'pbxadmin');
-define('DB_PASS', 'BvsCalls@2025!');
-define('DB_NAME', 'pbx');
+require_once '.env';
 
 // Create the connection object and assign it to the $conn variable
 $conn = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);

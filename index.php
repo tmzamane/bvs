@@ -1,18 +1,5 @@
 <?php
-// index.php - Complete Single-File Application
-
-// 1. Establish the database connection
-define('DB_HOST', 'localhost');
-define('DB_USER', 'pbxadmin');
-define('DB_PASS', 'BvsCalls@2025!');
-define('DB_NAME', 'pbx');
-
-$conn = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
-
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
+require_once "includes/db.php";
 // 2. Define the backend functions
 function formatRand($amount)
 {
