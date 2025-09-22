@@ -25,12 +25,7 @@ This is a simple PHP-based web application for analyzing and reporting on teleph
     ```
 
 2.  **Database Setup:**
-    -   Import your call log data into a MySQL database. The application expects a table named `BVSCalls` with the following schema:
-        -   `CallFrom`
-        -   `CallTo`
-        -   `CallTime`
-        -   `Duration`
-        -   `Cost`
+    -   Import your call log data into a MySQL database. The application expects a table named `BVSCalls`.
 
 3.  **Configure Database Connection:**
     -   Create a new file named `.env` in the root of your project directory.
@@ -49,6 +44,18 @@ This is a simple PHP-based web application for analyzing and reporting on teleph
 4.  **Run the Application:**
     -   Place the project files in your web server's document root (e.g., `C:\xampp\htdocs`).
     -   Open your web browser and navigate to the project URL (e.g., `http://localhost/bvs`).
+
+## Database Schema
+
+The application uses a single table named `BVSCalls`. The schema is as follows:
+
+| Column Name | Data Type | Description |
+|---|---|---|
+| `CallFrom` | VARCHAR | The extension that initiated the call. |
+| `CallTo` | VARCHAR | The destination number of the call. |
+| `CallTime` | DATETIME | The date and time the call was made. |
+| `Duration` | INT | The duration of the call in seconds. |
+| `Cost` | DECIMAL(10, 2) | The cost of the call in Rands. |
 
 ## File Structure
 
