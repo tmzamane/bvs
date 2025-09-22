@@ -21,7 +21,7 @@ This is a simple PHP-based web application for analyzing and reporting on teleph
 
 1.  **Clone the Repository:**
     ```bash
-    git clone [https://github.com/tmzamane/bvs.git](https://github.com/tmzamane/bvs.git)
+    git clone https://github.com/tmzamane/bvs.git
     ```
 
 2.  **Database Setup:**
